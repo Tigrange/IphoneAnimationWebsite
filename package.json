@@ -1,12 +1,12 @@
 {
-  "name": "iphone-animation-site",
+  "name": "appleproject",
   "version": "1.0.0",
-  "description": "This will load any static html site",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "start": 'browser-sync start --server --files "css/*.css"'
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "browser-sync start --server --files 'css/*.css'"
   },
-  "dependencies": {
-    dev: browser-sync start --server --files "css/*.css",
-    share: browser-sync start --proxy "myproject.dev" --files "css/*.css"
-  }
+  "author": "",
+  "license": "ISC"
 }
