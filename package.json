@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "This will load any static html site",
   "scripts": {
-    "start": "harp server --port $PORT"
+    "start": 'browser-sync start --server --files "css/*.css"'
   },
   "dependencies": {
-    "harp": "*"
+    dev: browser-sync start --server --files "css/*.css",
+    share: browser-sync start --proxy "myproject.dev" --files "css/*.css"
   }
 }
