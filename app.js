@@ -60,8 +60,8 @@ const tlSplitPin = gsap.timeline({
     trigger:'.forth-page',
     start:'0%',
     end:'100%',
-    pin:true,
-    scrub:true,
+    // pin:true,
+    // scrub:true,
 
   }
 })
@@ -78,13 +78,14 @@ let topIndex = 2;
 swatches.forEach((swatch, index) => {
   const coord = slides[index].getBoundingClientRect().left;
   swatch.addEventListener("click", (e) => {
+
     let swatchName = e.target.getAttribute("swatch");
     let closeUp = document.querySelector("." + swatchName);
     //Check if we are on the same swatch
     if (currentSwatch === swatchName) return;
 
     gsap.set(closeUp, { zIndex: topIndex });
-    tlSplitPin.fromTo(closeUp, { opacity: 0 }, { opacity: 1, duration: 1 });
+    // tlSplitPin.fromTo(closeUp, { opacity: 0 }, { opacity: 1, duration: 1 });
 
     //Gallery
     tlSplitPin.to(gallery, { x: -coord, duration: 1, ease: "back.out(1)" });
